@@ -1,0 +1,24 @@
+# Compiled Object files and Executables
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Debug & symbols
+*.dSYM/
+*.suo
+*.idb
+*.pdb
+
+# IDE and Editor configurations
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Large manual file (kept out of git history for ultra-lightweight cloning)
+*.pdf
