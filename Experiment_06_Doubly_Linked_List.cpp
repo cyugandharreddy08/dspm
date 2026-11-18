@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 6
- * Aim: To implement a Doubly Linked List with insertion, deletion, and 
- *      forward and reverse traversal.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 using namespace std; 
  

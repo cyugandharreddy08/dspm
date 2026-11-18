@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 17
- * Aim: To implement recursive Inorder, Preorder, and Postorder traversal 
- *      of a Binary Search Tree (BST).
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

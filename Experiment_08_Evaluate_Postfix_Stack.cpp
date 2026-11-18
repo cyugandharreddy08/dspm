@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 8
- * Aim: To evaluate a valid single-digit postfix expression using the Stack 
- *      data structure.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 #include <stack> 
 #include <string> 

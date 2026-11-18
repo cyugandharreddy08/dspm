@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 1
- * Aim: To implement Bubble Sort for sorting an array and perform Linear Search 
- *      and Binary Search with execution time analysis.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>

@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 3
- * Aim: To implement the addition of two univariate polynomials using an array 
- *      of structures.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 using namespace std; 
  

@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 19
- * Aim: To implement Depth-First Search (DFS) traversal on a graph 
- *      representing connectivity among college buildings.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 20
- * Aim: Implementation of an AVL Tree with insertion, balancing using 
- *      rotations (LL, RR, LR, and RL), inorder traversal, and height calculation.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 #include <algorithm>
 using namespace std;

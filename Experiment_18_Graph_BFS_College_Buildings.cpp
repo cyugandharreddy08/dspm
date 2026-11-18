@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 18
- * Aim: To implement Breadth-First Search (BFS) traversal on a graph 
- *      representing connectivity among college buildings.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 #include <vector>
 #include <queue>

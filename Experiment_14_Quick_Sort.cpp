@@ -1,11 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 14
- * Aim: To implement the Quick Sort algorithm using partitioning technique.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

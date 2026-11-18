@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 4
- * Aim: To reverse an array of integers using pointer arithmetic without direct 
- *      array indexing.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 using namespace std; 
 

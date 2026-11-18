@@ -1,11 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 15
- * Aim: To implement the Radix Sort algorithm for sorting integer data.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

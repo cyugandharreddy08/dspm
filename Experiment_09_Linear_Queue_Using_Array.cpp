@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 9
- * Aim: To implement a Linear Queue using arrays with insertion, deletion, 
- *      and queue length operations.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

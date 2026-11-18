@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 11
- * Aim: To implement the Selection Sort algorithm for sorting an array 
- *      in ascending order.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

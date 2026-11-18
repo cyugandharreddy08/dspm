@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 7
- * Aim: To check whether a given expression has balanced parentheses using 
- *      the Stack data structure.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 #include <stack> 
 #include <string> 

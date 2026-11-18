@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 16
- * Aim: To implement Binary Search Tree (BST) node creation and deletion 
- *      handling all deletion cases.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

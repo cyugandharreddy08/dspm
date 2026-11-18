@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 10
- * Aim: To implement a Circular Queue using arrays with insertion, deletion, 
- *      and queue length operations.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

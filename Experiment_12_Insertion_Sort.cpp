@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 12
- * Aim: To implement the Insertion Sort algorithm for sorting an array 
- *      in ascending order.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 

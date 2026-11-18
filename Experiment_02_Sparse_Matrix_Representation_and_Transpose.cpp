@@ -1,12 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 2
- * Aim: To implement Sparse Matrix Representation and Transpose using Compact 
- *      Representation.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 using namespace std; 
  

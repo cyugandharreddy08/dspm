@@ -1,14 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 5
- * Aim: To implement a Singly Linked List with creation, insertion, deletion, 
- *      and display operations using a menu-driven program. The program should 
- *      perform insertion and deletion at the beginning, at any specified 
- *      position, and at the end of the linked list.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream> 
 using namespace std; 
  

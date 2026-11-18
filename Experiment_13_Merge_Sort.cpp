@@ -1,11 +1,3 @@
-/*
- * ============================================================================
- * Experiment No. 13
- * Aim: To implement the Merge Sort algorithm using the divide-and-conquer approach.
- * Course: Data Structures and Programming Methodology Laboratory (PCL03DSPM)
- * ============================================================================
- */
-
 #include <iostream>
 using namespace std;
 
