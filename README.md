@@ -8,6 +8,13 @@ C++ implementations for all 20 laboratory experiments as prescribed in the **DSP
 
 ---
 
+## ⚡ Short Links for Lab Access
+
+- **Repository**: [tinyurl.com/dspm-cpp](https://tinyurl.com/dspm-cpp)
+- **Direct 1-Click ZIP Download (50 KB)**: [tinyurl.com/dspm-zip](https://tinyurl.com/dspm-zip)
+
+---
+
 ## ⚡ Quick Ways to Use on Lab Laptops
 
 ### Option 1: Direct 1-Click ZIP Download (No Git or CLI needed)
