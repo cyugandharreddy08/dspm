@@ -13,10 +13,9 @@ private:
     bool visited[MAX_BUILDINGS];
     int stepCounter;
 
-    // Recursive helper function for DFS
     void dfsRecursive(int current) {
         visited[current] = true;
-        cout << "Step " << stepCounter++ << ": Visited -> " 
+        cout << "Step " << stepCounter++ << ": Visited -> "
              << buildingNames[current] << " (ID: " << current << ")\n";
 
         for (int neighbor = 0; neighbor < numBuildings; neighbor++) {
@@ -52,7 +51,6 @@ public:
         return "Unknown";
     }
 
-    // Add an undirected pathway connecting two buildings
     void addPathway(int u, int v) {
         if (u >= 0 && u < numBuildings && v >= 0 && v < numBuildings) {
             adjMatrix[u][v] = 1;
@@ -60,7 +58,6 @@ public:
         }
     }
 
-    // Display campus buildings and paths
     void displayCampusMap() {
         cout << "\n--- College Campus Buildings ---\n";
         for (int i = 0; i < numBuildings; i++) {
@@ -82,7 +79,6 @@ public:
         }
     }
 
-    // Depth-First Search (DFS) Traversal
     void performDFS(int startVertex) {
         if (startVertex < 0 || startVertex >= numBuildings) {
             cout << "Invalid starting building index!\n";
@@ -100,7 +96,6 @@ public:
 
         dfsRecursive(startVertex);
 
-        // Check if there are any disconnected components
         for (int i = 0; i < numBuildings; i++) {
             if (!visited[i]) {
                 cout << "\nVisiting disconnected building component:\n";
@@ -113,7 +108,7 @@ public:
 };
 
 int main() {
-    // 8 standard campus buildings
+
     const int N = 8;
     CollegeGraphDFS campus(N);
 
@@ -126,17 +121,16 @@ int main() {
     campus.setBuildingName(6, "Hostel Complex");
     campus.setBuildingName(7, "Campus Cafeteria & Food Court");
 
-    // Realistic campus pathways
-    campus.addPathway(0, 1); // Gate - Admin Block
-    campus.addPathway(0, 4); // Gate - Auditorium
-    campus.addPathway(1, 2); // Admin Block - CSE Department
-    campus.addPathway(1, 3); // Admin Block - Central Library
-    campus.addPathway(2, 3); // CSE Department - Central Library
-    campus.addPathway(2, 5); // CSE Department - SAC
-    campus.addPathway(3, 7); // Central Library - Cafeteria
-    campus.addPathway(4, 5); // Auditorium - SAC
-    campus.addPathway(5, 6); // SAC - Hostel Complex
-    campus.addPathway(6, 7); // Hostel Complex - Cafeteria
+    campus.addPathway(0, 1);
+    campus.addPathway(0, 4);
+    campus.addPathway(1, 2);
+    campus.addPathway(1, 3);
+    campus.addPathway(2, 3);
+    campus.addPathway(2, 5);
+    campus.addPathway(3, 7);
+    campus.addPathway(4, 5);
+    campus.addPathway(5, 6);
+    campus.addPathway(6, 7);
 
     campus.displayCampusMap();
 

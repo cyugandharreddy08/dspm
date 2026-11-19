@@ -23,7 +23,6 @@ public:
         return front == -1 || front > rear;
     }
 
-    // Insertion operation (Enqueue)
     void enqueue(int value) {
         if (isFull()) {
             cout << "Queue Overflow! Cannot insert " << value << ".\n";
@@ -39,7 +38,6 @@ public:
         cout << "Element " << value << " inserted into queue successfully.\n";
     }
 
-    // Deletion operation (Dequeue)
     void dequeue() {
         if (isEmpty()) {
             cout << "Queue Underflow! Queue is empty.\n";
@@ -51,14 +49,12 @@ public:
 
         cout << "Element " << deletedValue << " deleted from queue successfully.\n";
 
-        // Reset queue pointers if all elements are dequeued
         if (front > rear) {
             front = -1;
             rear = -1;
         }
     }
 
-    // Queue length operation
     int queueLength() {
         if (isEmpty()) {
             return 0;
@@ -66,7 +62,6 @@ public:
         return rear - front + 1;
     }
 
-    // Display elements of queue
     void display() {
         if (isEmpty()) {
             cout << "Queue is empty!\n";
@@ -80,7 +75,6 @@ public:
         cout << "\n";
     }
 
-    // Peek front element
     void peek() {
         if (isEmpty()) {
             cout << "Queue is empty!\n";

@@ -2,7 +2,6 @@
 #include <algorithm>
 using namespace std;
 
-// Structure for an AVL Tree Node
 struct Node {
     int key;
     Node* left;
@@ -13,63 +12,50 @@ struct Node {
         key = val;
         left = nullptr;
         right = nullptr;
-        height = 1; // Initial height for new node
+        height = 1;
     }
 };
 
-// Helper function to get height of a node
 int getHeight(Node* node) {
     if (node == nullptr)
         return 0;
     return node->height;
 }
 
-// Helper function to get balance factor of a node: Height(Left) - Height(Right)
 int getBalanceFactor(Node* node) {
     if (node == nullptr)
         return 0;
     return getHeight(node->left) - getHeight(node->right);
 }
 
-// Right Rotation (LL Rotation)
-// Applied when a new node is inserted into the left subtree of the left child
 Node* rightRotate(Node* y) {
     Node* x = y->left;
     Node* T2 = x->right;
 
-    // Perform rotation
     x->right = y;
     y->left = T2;
 
-    // Update heights
     y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
     x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
 
-    // Return new root
     return x;
 }
 
-// Left Rotation (RR Rotation)
-// Applied when a new node is inserted into the right subtree of the right child
 Node* leftRotate(Node* x) {
     Node* y = x->right;
     Node* T2 = y->left;
 
-    // Perform rotation
     y->left = x;
     x->right = T2;
 
-    // Update heights
     x->height = max(getHeight(x->left), getHeight(x->right)) + 1;
     y->height = max(getHeight(y->left), getHeight(y->right)) + 1;
 
-    // Return new root
     return y;
 }
 
-// Insert function for AVL Tree with automatic balancing
 Node* insertAVL(Node* node, int key) {
-    // 1. Normal BST insertion
+
     if (node == nullptr)
         return new Node(key);
 
@@ -82,45 +68,35 @@ Node* insertAVL(Node* node, int key) {
         return node;
     }
 
-    // 2. Update height of this ancestor node
     node->height = 1 + max(getHeight(node->left), getHeight(node->right));
 
-    // 3. Get the balance factor of this node to check whether it became unbalanced
     int balance = getBalanceFactor(node);
 
-    // If the node becomes unbalanced, there are 4 cases:
-
-    // Case 1: Left Left (LL Rotation)
     if (balance > 1 && key < node->left->key) {
         cout << "Unbalance detected at node " << node->key << " (Balance Factor: " << balance << "). Performing LL (Right) Rotation.\n";
         return rightRotate(node);
     }
 
-    // Case 2: Right Right (RR Rotation)
     if (balance < -1 && key > node->right->key) {
         cout << "Unbalance detected at node " << node->key << " (Balance Factor: " << balance << "). Performing RR (Left) Rotation.\n";
         return leftRotate(node);
     }
 
-    // Case 3: Left Right (LR Rotation)
     if (balance > 1 && key > node->left->key) {
         cout << "Unbalance detected at node " << node->key << " (Balance Factor: " << balance << "). Performing LR (Left-Right) Rotation.\n";
         node->left = leftRotate(node->left);
         return rightRotate(node);
     }
 
-    // Case 4: Right Left (RL Rotation)
     if (balance < -1 && key < node->right->key) {
         cout << "Unbalance detected at node " << node->key << " (Balance Factor: " << balance << "). Performing RL (Right-Left) Rotation.\n";
         node->right = rightRotate(node->right);
         return leftRotate(node);
     }
 
-    // Return the unchanged node pointer
     return node;
 }
 
-// Inorder traversal (Left, Root, Right) -> Prints keys in sorted order
 void inorder(Node* root) {
     if (root != nullptr) {
         inorder(root->left);
@@ -129,7 +105,6 @@ void inorder(Node* root) {
     }
 }
 
-// Function to free allocated memory
 void freeTree(Node* root) {
     if (root != nullptr) {
         freeTree(root->left);

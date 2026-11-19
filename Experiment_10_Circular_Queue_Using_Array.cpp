@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-const int MAX = 5; // Fixed capacity to clearly demonstrate circular wrap-around
+const int MAX = 5;
 
 class CircularQueue {
 private:
@@ -23,7 +23,6 @@ public:
         return front == -1;
     }
 
-    // Insertion operation (Enqueue)
     void enqueue(int value) {
         if (isFull()) {
             cout << "Queue Overflow! Circular Queue is full. Cannot insert " << value << ".\n";
@@ -41,7 +40,6 @@ public:
         cout << "Element " << value << " inserted at index " << rear << " successfully.\n";
     }
 
-    // Deletion operation (Dequeue)
     void dequeue() {
         if (isEmpty()) {
             cout << "Queue Underflow! Circular Queue is empty.\n";
@@ -52,7 +50,7 @@ public:
         cout << "Element " << deletedValue << " deleted from index " << front << " successfully.\n";
 
         if (front == rear) {
-            // Queue had only one element, now becomes empty
+
             front = -1;
             rear = -1;
         } else {
@@ -60,7 +58,6 @@ public:
         }
     }
 
-    // Queue length operation
     int queueLength() {
         if (isEmpty()) {
             return 0;
@@ -68,7 +65,6 @@ public:
         return (rear - front + MAX) % MAX + 1;
     }
 
-    // Peek front element
     void peek() {
         if (isEmpty()) {
             cout << "Queue is empty!\n";
@@ -77,7 +73,6 @@ public:
         cout << "Front element: " << arr[front] << " at index " << front << "\n";
     }
 
-    // Display elements of circular queue
     void display() {
         if (isEmpty()) {
             cout << "Queue is empty!\n";

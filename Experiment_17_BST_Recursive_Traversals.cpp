@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Structure for a BST node
 struct Node {
     int data;
     Node* left;
@@ -14,7 +13,6 @@ struct Node {
     }
 };
 
-// Function to insert a node into BST
 Node* insertNode(Node* root, int value) {
     if (root == nullptr) {
         return new Node(value);
@@ -29,7 +27,6 @@ Node* insertNode(Node* root, int value) {
     return root;
 }
 
-// Recursive Inorder Traversal: Left -> Root -> Right
 void recursiveInorder(Node* root) {
     if (root != nullptr) {
         recursiveInorder(root->left);
@@ -38,7 +35,6 @@ void recursiveInorder(Node* root) {
     }
 }
 
-// Recursive Preorder Traversal: Root -> Left -> Right
 void recursivePreorder(Node* root) {
     if (root != nullptr) {
         cout << root->data << " ";
@@ -47,7 +43,6 @@ void recursivePreorder(Node* root) {
     }
 }
 
-// Recursive Postorder Traversal: Left -> Right -> Root
 void recursivePostorder(Node* root) {
     if (root != nullptr) {
         recursivePostorder(root->left);
@@ -56,7 +51,6 @@ void recursivePostorder(Node* root) {
     }
 }
 
-// Function to free allocated memory
 void freeTree(Node* root) {
     if (root != nullptr) {
         freeTree(root->left);

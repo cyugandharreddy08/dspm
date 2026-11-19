@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Structure for a BST node
 struct Node {
     int data;
     Node* left;
@@ -14,7 +13,6 @@ struct Node {
     }
 };
 
-// Function to insert a node into BST (Creation)
 Node* insertNode(Node* root, int value) {
     if (root == nullptr) {
         return new Node(value);
@@ -31,7 +29,6 @@ Node* insertNode(Node* root, int value) {
     return root;
 }
 
-// Function to find the minimum value node in a subtree (Inorder Successor)
 Node* findMin(Node* root) {
     while (root && root->left != nullptr) {
         root = root->left;
@@ -39,10 +36,6 @@ Node* findMin(Node* root) {
     return root;
 }
 
-// Function to delete a node from BST handling all deletion cases:
-// Case 1: Node has no children (Leaf node)
-// Case 2: Node has one child (Left or Right)
-// Case 3: Node has two children (Replace with Inorder Successor)
 Node* deleteNode(Node* root, int key, bool& deleted) {
     if (root == nullptr) {
         return nullptr;
@@ -53,35 +46,32 @@ Node* deleteNode(Node* root, int key, bool& deleted) {
     } else if (key > root->data) {
         root->right = deleteNode(root->right, key, deleted);
     } else {
-        // Node found
+
         deleted = true;
 
-        // Case 1: Leaf node (no children)
         if (root->left == nullptr && root->right == nullptr) {
             delete root;
             return nullptr;
         }
-        // Case 2a: Only right child exists
+
         else if (root->left == nullptr) {
             Node* temp = root->right;
             delete root;
             return temp;
         }
-        // Case 2b: Only left child exists
+
         else if (root->right == nullptr) {
             Node* temp = root->left;
             delete root;
             return temp;
         }
-        // Case 3: Two children exist
+
         else {
-            // Find inorder successor (smallest in the right subtree)
+
             Node* temp = findMin(root->right);
 
-            // Copy inorder successor's content to this node
             root->data = temp->data;
 
-            // Delete the inorder successor from right subtree
             bool dummy = false;
             root->right = deleteNode(root->right, temp->data, dummy);
         }
@@ -89,7 +79,6 @@ Node* deleteNode(Node* root, int key, bool& deleted) {
     return root;
 }
 
-// Inorder traversal to display BST elements in sorted order
 void inorder(Node* root) {
     if (root != nullptr) {
         inorder(root->left);
@@ -98,7 +87,6 @@ void inorder(Node* root) {
     }
 }
 
-// Function to free all nodes of BST
 void freeTree(Node* root) {
     if (root != nullptr) {
         freeTree(root->left);
